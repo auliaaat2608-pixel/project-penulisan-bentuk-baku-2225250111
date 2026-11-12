@@ -1,0 +1,1135 @@
+
+/* =================================
+   MATHLEARN - PASTEL THEME
+   ================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: linear-gradient(135deg, #f3eaff, #e9f4ff, #fff0f6);
+    color: #393451;
+}
+
+button,
+input {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+    transition: 0.25s ease;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.04);
+}
+
+#app {
+    width: 100%;
+    min-height: 100vh;
+    padding: 24px;
+}
+
+/* Judul dan teks */
+
+h1, h2, h3 {
+    color: #514078;
+}
+
+p {
+    line-height: 1.6;
+}
+
+/* Kartu umum */
+
+.card,
+.welcome-card,
+.menu-card,
+.dashboard-card {
+    background: rgba(255, 255, 255, 0.92);
+    border: 1px solid #eee5ff;
+    border-radius: 22px;
+    padding: 22px;
+    box-shadow: 0 8px 24px rgba(105, 79, 150, 0.09);
+}
+
+/* Halaman sambutan */
+
+.welcome-container {
+    max-width: 520px;
+    margin: 40px auto;
+    text-align: center;
+}
+
+.mascot {
+    font-size: 65px;
+    margin-bottom: 12px;
+}
+
+.welcome-card {
+    margin-top: 25px;
+    text-align: left;
+}
+
+.welcome-card input {
+    width: 100%;
+    padding: 13px 15px;
+    margin: 10px 0 18px;
+    border: 1px solid #d9c9f4;
+    border-radius: 13px;
+    outline: none;
+}
+
+.welcome-card input:focus {
+    border-color: #9575cd;
+    box-shadow: 0 0 0 3px #eee5ff;
+}
+
+/* Tombol */
+
+button {
+    border: none;
+    border-radius: 13px;
+    padding: 12px 20px;
+    background: linear-gradient(135deg, #9575cd, #b39ddb);
+    color: white;
+    font-weight: 600;
+    box-shadow: 0 4px 12px rgba(120, 90, 170, 0.15);
+}
+
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.footer-text {
+    color: #89829d;
+    font-size: 13px;
+    margin-top: 25px;
+}
+
+/* Kartu menu */
+
+.menu-card {
+    margin: 12px 0;
+    transition: 0.25s ease;
+}
+
+.menu-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 25px rgba(105, 79, 150, 0.15);
+}
+
+/* Tampilan HP */
+
+@media (max-width: 600px) {
+    #app {
+        padding: 15px;
+    }
+
+    .welcome-container {
+        margin: 20px auto;
+    }
+
+    .welcome-card,
+    .card,
+    .menu-card {
+        padding: 18px;
+        border-radius: 18px;
+    }
+
+    button {
+        max-width: 100%;
+    }
+}
+
+/* =====================================
+   MATHLEARN - CUTE PASTEL DASHBOARD
+   ===================================== */
+
+.dashboard-container {
+    max-width: 1050px;
+    margin: 0 auto;
+    padding: 15px;
+}
+
+/* Header */
+
+.dashboard-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 25px;
+    background: linear-gradient(135deg, #e9dcff, #fce4f1);
+    border-radius: 28px;
+    margin-bottom: 25px;
+    overflow: hidden;
+}
+
+.greeting-label {
+    color: #8067a9;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.dashboard-greeting h1 {
+    margin: 8px 0;
+    font-size: 34px;
+}
+
+.dashboard-greeting p {
+    color: #695783;
+    font-size: 17px;
+}
+
+.dashboard-mascot {
+    width: 180px;
+    max-width: 38%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 22px;
+}
+
+/* Hero */
+
+.dashboard-hero {
+    position: relative;
+    padding: 30px;
+    margin-bottom: 30px;
+    background: linear-gradient(135deg, #a88be5, #c7a9ef);
+    color: white;
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(128, 95, 180, 0.15);
+}
+
+.hero-label {
+    display: inline-block;
+    padding: 7px 13px;
+    background: rgba(255, 255, 255, 0.25);
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.dashboard-hero h2 {
+    color: white;
+    margin: 17px 0 8px;
+    font-size: 25px;
+}
+
+.dashboard-hero p {
+    max-width: 550px;
+    color: white;
+}
+
+.hero-decoration {
+    margin-top: 15px;
+    font-size: 27px;
+}
+
+/* Menu */
+
+.dashboard-menu h2 {
+    margin-bottom: 5px;
+}
+
+.menu-description {
+    color: #827993;
+    margin-top: 5px;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+    margin-top: 20px;
+}
+
+.menu-item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    min-height: 165px;
+    padding: 22px;
+    border: 2px solid transparent;
+    border-radius: 23px;
+    color: #51436c;
+    box-shadow: 0 7px 18px rgba(100, 80, 130, 0.08);
+}
+
+.menu-icon {
+    font-size: 35px;
+    margin-bottom: 12px;
+}
+
+.menu-title {
+    font-size: 17px;
+    font-weight: 800;
+}
+
+.menu-info {
+    margin-top: 6px;
+    font-size: 13px;
+    font-weight: normal;
+}
+
+.menu-arrow {
+    position: absolute;
+    right: 18px;
+    bottom: 15px;
+    font-size: 22px;
+}
+
+.material-item {
+    background: #eee6ff;
+    border-color: #dfd0ff;
+}
+
+.practice-item {
+    background: #ffe8f0;
+    border-color: #ffd3e3;
+}
+
+.game-item {
+    background: #e4f3ff;
+    border-color: #cde8ff;
+}
+
+.progress-item {
+    background: #fff2d9;
+    border-color: #ffe3a9;
+}
+
+.menu-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 22px rgba(100, 80, 130, 0.14);
+}
+
+/* Footer */
+
+.dashboard-footer {
+    text-align: center;
+    margin-top: 30px;
+    padding: 20px 10px;
+}
+
+.change-name-button {
+    background: #8f75c5;
+    margin-bottom: 12px;
+}
+
+.dashboard-footer p {
+    color: #786a91;
+    font-size: 13px;
+}
+
+.dashboard-footer small {
+    color: #9a91a8;
+}
+
+/* Tampilan HP */
+
+@media (max-width: 600px) {
+    .dashboard-container {
+        padding: 5px;
+    }
+
+    .dashboard-header {
+        padding: 18px;
+        border-radius: 22px;
+    }
+
+    .dashboard-greeting h1 {
+        font-size: 25px;
+    }
+
+    .dashboard-mascot {
+        width: 125px;
+    }
+
+    .dashboard-hero {
+        padding: 22px;
+    }
+
+    .dashboard-hero h2 {
+        font-size: 21px;
+    }
+
+    .menu-grid {
+        gap: 12px;
+    }
+
+    .menu-item {
+        min-height: 155px;
+        padding: 15px;
+    }
+
+    .menu-title {
+        font-size: 15px;
+    }
+
+    .menu-info {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 360px) {
+    .menu-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* =====================================
+   MATHLEARN - CUTE PASTEL MATERIAL
+   ===================================== */
+
+.material-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 15px;
+}
+
+.material-header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 25px;
+    margin-bottom: 25px;
+    background: linear-gradient(135deg, #e9dcff, #ffe5f0);
+    border-radius: 25px;
+    overflow: hidden;
+}
+
+.material-back {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    padding: 9px 15px;
+    font-size: 13px;
+    background: #ffffff;
+    color: #745b9e;
+}
+
+.material-heading {
+    padding-top: 35px;
+    max-width: 650px;
+}
+
+.material-heading span {
+    color: #896bb3;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.material-heading h1 {
+    font-size: 30px;
+    margin: 12px 0;
+}
+
+.material-heading p {
+    color: #78658f;
+}
+
+.material-mascot {
+    width: 160px;
+    max-width: 30%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 20px;
+}
+
+.material-content {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.material-card {
+    position: relative;
+    padding: 25px;
+    border-radius: 22px;
+    border: 1px solid #eee5fa;
+    background: white;
+    box-shadow: 0 7px 18px rgba(100, 80, 130, 0.07);
+}
+
+.material-card h2 {
+    font-size: 19px;
+    margin-top: 8px;
+}
+
+.material-card p {
+    color: #6f687d;
+    line-height: 1.8;
+}
+
+.material-number {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 20px;
+    background: #f0e7ff;
+    color: #8065aa;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.definition-card {
+    background: #fbf8ff;
+}
+
+.formula-card {
+    background: #fff7fb;
+}
+
+.large-number-card {
+    background: #f4faff;
+}
+
+.small-number-card {
+    background: #f5fff9;
+}
+
+.multiplication-card {
+    background: #fff9ed;
+}
+
+.division-card {
+    background: #fff4f2;
+}
+
+.formula-box {
+    padding: 18px;
+    margin: 15px 0;
+    text-align: center;
+    border-radius: 15px;
+    background: white;
+    color: #7556a6;
+    font-size: 22px;
+    font-weight: 800;
+    border: 1px dashed #cbb7eb;
+}
+
+.example-box,
+.calculation-box {
+    padding: 15px;
+    margin: 15px 0;
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 15px;
+}
+
+.example-box h3,
+.calculation-box h3 {
+    color: #7755a8;
+    font-size: 21px;
+}
+
+.calculation-box p {
+    text-align: center;
+    font-weight: 600;
+}
+
+.material-footer {
+    margin: 30px 0;
+    padding: 25px;
+    text-align: center;
+    background: linear-gradient(135deg, #f1e9ff, #ffeaf2);
+    border-radius: 22px;
+}
+
+.material-footer p {
+    color: #765d9c;
+    font-weight: 600;
+}
+
+.material-footer button {
+    margin-top: 10px;
+}
+
+/* Tampilan HP */
+
+@media (max-width: 650px) {
+    .material-container {
+        padding: 5px;
+    }
+
+    .material-header {
+        padding: 18px;
+        padding-top: 45px;
+    }
+
+    .material-heading h1 {
+        font-size: 23px;
+    }
+
+    .material-heading span {
+        font-size: 9px;
+    }
+
+    .material-mascot {
+        width: 105px;
+    }
+
+    .material-content {
+        grid-template-columns: 1fr;
+        gap: 13px;
+    }
+
+    .material-card {
+        padding: 20px;
+    }
+
+    .formula-box {
+        font-size: 19px;
+    }
+}
+
+/* =====================================
+   MATHLEARN - PRACTICE PAGE
+   ===================================== */
+
+.practice-container {
+    max-width: 1050px;
+    margin: 0 auto;
+    padding: 15px;
+}
+
+.practice-header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 30px;
+    padding-top: 65px;
+    margin-bottom: 25px;
+    border-radius: 25px;
+    background: linear-gradient(135deg, #e9dcff, #ffe5f0);
+}
+
+.practice-back {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+}
+
+.practice-heading span {
+    color: #896bb3;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.practice-heading h1 {
+    color: #57436f;
+    font-size: 29px;
+}
+
+.practice-heading p {
+    color: #78658f;
+    line-height: 1.6;
+}
+
+.practice-mascot {
+    width: 145px;
+    max-width: 30%;
+    object-fit: contain;
+    border-radius: 20px;
+}
+
+.practice-intro {
+    margin: 25px 0 18px;
+}
+
+.practice-intro h2 {
+    color: #614d7e;
+}
+
+.practice-intro p {
+    color: #827993;
+}
+
+.practice-level-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.practice-level-card {
+    padding: 23px;
+    border-radius: 23px;
+    border: 2px solid transparent;
+    box-shadow: 0 7px 18px rgba(100, 80, 130, 0.08);
+    transition: transform 0.2s ease;
+}
+
+.practice-level-card:hover {
+    transform: translateY(-4px);
+}
+
+.level-color-1 {
+    background: #f0e9ff;
+    border-color: #dfd0ff;
+}
+
+.level-color-2 {
+    background: #ffeaf2;
+    border-color: #ffd3e3;
+}
+
+.level-color-3 {
+    background: #e8f5ff;
+    border-color: #cde8ff;
+}
+
+.level-color-4 {
+    background: #fff4dc;
+    border-color: #ffe3a9;
+}
+
+.practice-level-icon {
+    font-size: 38px;
+    margin-bottom: 12px;
+}
+
+.practice-level-card h3 {
+    color: #59476f;
+}
+
+.practice-level-card p {
+    color: #786d88;
+    font-size: 14px;
+}
+
+.practice-status {
+    display: inline-block;
+    padding: 7px 13px;
+    margin: 7px 0;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.status-completed {
+    background: #dff5e7;
+    color: #39764e;
+}
+
+.status-unlocked {
+    background: #e5ddff;
+    color: #7156a3;
+}
+
+.status-locked {
+    background: #eeeeee;
+    color: #777777;
+}
+
+.practice-level-button {
+    width: 100%;
+    margin-top: 12px;
+    padding: 12px;
+    border-radius: 13px;
+    background: #9277c6;
+    color: white;
+    font-weight: bold;
+}
+
+.practice-level-button:disabled {
+    background: #c9c2d1;
+    color: #ffffff;
+    cursor: not-allowed;
+}
+
+.practice-footer {
+    margin-top: 30px;
+    padding: 23px;
+    text-align: center;
+    border-radius: 22px;
+    background: #f4edff;
+}
+
+.practice-footer p {
+    color: #725b96;
+}
+
+/* =====================================
+   HALAMAN PERTANYAAN LATIHAN
+   ===================================== */
+
+.question-container {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 15px;
+}
+
+.question-header {
+    padding: 20px;
+    border-radius: 20px;
+    background: #f0e9ff;
+}
+
+.question-progress,
+.puzzle-progress {
+    height: 12px;
+    margin: 18px 0;
+    overflow: hidden;
+    border-radius: 20px;
+    background: #eee8f5;
+}
+
+.question-progress div,
+.puzzle-progress div {
+    height: 100%;
+    border-radius: 20px;
+    background: linear-gradient(90deg, #a58be0, #edafd0);
+    transition: width 0.3s ease;
+}
+
+.question-card {
+    padding: 25px;
+    border-radius: 25px;
+    background: #fffaff;
+    box-shadow: 0 7px 20px rgba(100, 80, 130, 0.08);
+}
+
+.question-mascot {
+    display: block;
+    width: 110px;
+    height: 110px;
+    object-fit: contain;
+    margin: 0 auto 15px;
+}
+
+.question-card h2 {
+    color: #725b96;
+    text-align: center;
+}
+
+.question-text {
+    padding: 20px;
+    border-radius: 17px;
+    background: #f1eaff;
+    color: #55446d;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.answer-list {
+    display: grid;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.answer-option {
+    width: 100%;
+    padding: 15px;
+    text-align: left;
+    border: 2px solid #eadff8;
+    border-radius: 15px;
+    background: white;
+    color: #5c4b70;
+}
+
+.answer-option:hover:not(:disabled) {
+    background: #f3edff;
+    border-color: #a88be5;
+}
+
+.answer-option:disabled {
+    opacity: 0.75;
+    cursor: not-allowed;
+}
+
+.answer-option span {
+    font-weight: bold;
+    margin-right: 8px;
+}
+
+.feedback-correct,
+.feedback-hint,
+.feedback-wrong {
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 18px;
+    line-height: 1.7;
+}
+
+.feedback-correct {
+    background: #e5f8eb;
+    color: #376d49;
+}
+
+.feedback-hint {
+    background: #fff4dc;
+    color: #80612d;
+}
+
+.feedback-wrong {
+    background: #ffeaf0;
+    color: #89506a;
+}
+
+/* =====================================
+   HASIL LATIHAN
+   ===================================== */
+
+.result-container {
+    max-width: 650px;
+    margin: 30px auto;
+    padding: 15px;
+}
+
+.result-card {
+    padding: 30px;
+    text-align: center;
+    border-radius: 27px;
+    background: linear-gradient(135deg, #f0e9ff, #ffeaf2);
+}
+
+.result-mascot {
+    width: 145px;
+    height: 145px;
+    object-fit: contain;
+}
+
+.result-score {
+    margin: 20px auto;
+    color: #8065aa;
+    font-size: 48px;
+    font-weight: 800;
+}
+
+/* =====================================
+   TAMPILAN HP
+   ===================================== */
+
+@media (max-width: 650px) {
+    .practice-container,
+    .question-container {
+        padding: 5px;
+    }
+
+    .practice-header {
+        padding: 20px;
+        padding-top: 65px;
+    }
+
+    .practice-heading h1 {
+        font-size: 23px;
+    }
+
+    .practice-mascot {
+        width: 100px;
+    }
+
+    .practice-level-list {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .practice-level-card {
+        padding: 19px;
+    }
+
+    .question-card {
+        padding: 17px;
+    }
+
+    .question-text {
+        font-size: 16px;
+    }
+}
+/* =================================
+   HALAMAN PERMAINAN PUZZLE
+================================= */
+
+.puzzle-container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 24px;
+}
+
+.puzzle-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.puzzle-heading h2 {
+    color: #7656a5;
+    margin-bottom: 8px;
+}
+
+.puzzle-heading p {
+    color: #777;
+    line-height: 1.6;
+}
+
+.puzzle-level-info {
+    background: #f0e8ff;
+    color: #7656a5;
+    padding: 12px 18px;
+    border-radius: 16px;
+    font-weight: bold;
+}
+
+.puzzle-card {
+    background: #ffffff;
+    border: 2px solid #eee5ff;
+    border-radius: 24px;
+    padding: 24px;
+    margin-bottom: 24px;
+    box-shadow: 0 5px 18px rgba(120, 90, 160, 0.08);
+}
+
+.puzzle-instruction {
+    background: #fff3d9;
+    color: #8b6a2e;
+    padding: 14px;
+    border-radius: 14px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.puzzle-board {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+    margin: 20px 0;
+}
+
+.puzzle-slot {
+    min-height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px;
+    border: 2px dashed #cbb8eb;
+    border-radius: 16px;
+    background: #faf7ff;
+    color: #7656a5;
+    text-align: center;
+}
+
+.puzzle-slot.filled {
+    border-style: solid;
+    background: #f0eaff;
+}
+
+.puzzle-pieces {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.puzzle-piece {
+    padding: 16px;
+    background: #e8f5ff;
+    border: 2px solid #c9e7ff;
+    border-radius: 16px;
+    color: #426d91;
+    text-align: center;
+    font-weight: bold;
+    cursor: grab;
+    transition: 0.2s ease;
+}
+
+.puzzle-piece:hover {
+    transform: translateY(-3px);
+    background: #dff0ff;
+}
+
+.puzzle-piece.selected {
+    border-color: #9b78d0;
+    background: #eee4ff;
+}
+
+.puzzle-piece.used {
+    opacity: 0.45;
+    cursor: not-allowed;
+}
+
+.puzzle-actions {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 24px;
+    flex-wrap: wrap;
+}
+
+.puzzle-feedback {
+    padding: 16px;
+    border-radius: 16px;
+    margin-top: 20px;
+    line-height: 1.6;
+}
+
+.puzzle-feedback.correct {
+    background: #e5f8ed;
+    color: #36764d;
+}
+
+.puzzle-feedback.incorrect {
+    background: #fff0ed;
+    color: #a44e43;
+}
+
+.puzzle-progress {
+    height: 12px;
+    background: #eee8f7;
+    border-radius: 20px;
+    overflow: hidden;
+    margin: 16px 0;
+}
+
+.puzzle-progress-bar {
+    height: 100%;
+    background: #a98bd7;
+    border-radius: 20px;
+    transition: width 0.3s ease;
+}
+
+/* Tampilan HP */
+
+@media (max-width: 600px) {
+    .puzzle-container {
+        padding: 14px;
+    }
+
+    .puzzle-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .puzzle-card {
+        padding: 16px;
+    }
+
+    .puzzle-board,
+    .puzzle-pieces {
+        grid-template-columns: 1fr;
+    }
+
+    .puzzle-slot {
+        min-height: 75px;
+    }
+}
